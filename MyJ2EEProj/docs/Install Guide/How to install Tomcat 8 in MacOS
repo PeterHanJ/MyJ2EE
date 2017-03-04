@@ -1,30 +1,30 @@
 Installing Java
-	1.Download Java 1.8.0_111 
-      http://www.oracle.com/technetwork/java/javase/downloads/index.html
-	2.Set Java Home
-      export JAVA_HOME=$(/usr/libexec/java_home)
-      
-Installing Tomcat8 in MacOS
-	1.Download Tomecat(tar.gz) from apache.
-	2.Opening/unarchiving download file and copy it in your location.
-	3.Open to Terminal app to move the unarchived distribution to /usr/local
-	  sudo mkdir -p /usr/local
-      sudo mv ~/Downloads/apache-tomcat-9.0.0.M15 /usr/local
-	4.create a symbolic link that we are going to use when referring to Tomcat 
-	  sudo rm -f /Library/Tomcat
-      sudo ln -s /usr/local/apache-tomcat-9.0.0.M15 /Library/Tomcat
-    5.Change ownership of the /Library/Tomcat folder hierarchy:
-      sudo chown -R <your_username> /Library/Tomcat
-    6.Make all scripts executable:
-      sudo chmod +x /Library/Tomcat/bin/*.sh
-    7.Start and stop:                     (cd /Library/Tomcat/bin)
-	  $ /Library/Tomcat/bin/startup.sh    (./catalina.sh start)
-      $ /Library/Tomcat/bin/shutdown.sh   (./catalina.sh stop)
-    8.To change the user for Tomcat Admin/Manager user. Do change the configure under tomcat_home/conf/tomcat_users.xml  
-      <role rolename="manager-gui"/>
-      <role rolename="manager-script"/>
-      <role rolename="manager-jmx"/>
-      <role rolename="manager-status"/>
-      <user username="peter" password="peter" roles="manager-gui,manager-status"/>
+  1.Download Java 1.8.0_111  
+    http://www.oracle.com/technetwork/java/javase/downloads/index.html  
+  2.Set Java Home  
+  export JAVA_HOME=$(/usr/libexec/java_home)  
+  
+ Installing Tomcat8 in MacOS  
+  1.Download Tomecat(tar.gz) from apache.  
+  2.Opening/unarchiving download file and copy it in your location.  
+  3.Open to Terminal app to move the unarchived distribution to /usr/local  
+    sudo mkdir -p /usr/local  
+    sudo mv ~/Downloads/apache-tomcat-9.0.0.M15 /usr/local  
+  4.create a symbolic link that we are going to use when referring to Tomcat  
+    sudo rm -f /Library/Tomcat  
+    sudo ln -s /usr/local/apache-tomcat-9.0.0.M15 /Library/Tomcat  
+  5.Change ownership of the /Library/Tomcat folder hierarchy:  
+    sudo chown -R <your_username> /Library/Tomcat  
+  6.Make all scripts executable:  
+    sudo chmod +x /Library/Tomcat/bin/*.sh  
+  7.Start and stop:                     (cd /Library/Tomcat/bin)  
+    $ /Library/Tomcat/bin/startup.sh    (./catalina.sh start)  
+    $ /Library/Tomcat/bin/shutdown.sh   (./catalina.sh stop)  
+  8.To change the user for Tomcat Admin/Manager user. Do change the configure under tomcat_home/conf/tomcat_users.xml  
+    <role rolename="manager-gui"/>  
+    <role rolename="manager-script"/>  
+    <role rolename="manager-jmx"/>  
+    <role rolename="manager-status"/>  
+    <user username="peter" password="peter" roles="manager-gui,manager-status"/>  
     
       
